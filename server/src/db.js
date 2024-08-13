@@ -7,8 +7,8 @@ export const connectDB = async () => {
         await mongoose.connect(MONGODB_URI);
         console.log("MongoDB is connected");
 
-        //const alumnos = await Alumno.find();
-        //console.log("encontrados:", alumnos);
+        const alumnos = await Alumno.find();
+        console.log("encontrados:", alumnos);
     } catch (error) {
         console.error(error);
     }
