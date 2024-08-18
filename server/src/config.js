@@ -16,4 +16,5 @@ export const DB_URL = process.env.DB_URL;
 export const FRONTEND_URL = process.env.FRONTEND_URL;
 
 //JWT
-export const TOKEN_SECRET = process.env.TOKEN_SECRET;
+export const JWT_SECRET = process.env.JWT_SECRET;
+export const JWT_EXPIRES = process.env.JWT_EXPIRES;
