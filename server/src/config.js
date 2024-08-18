@@ -1,13 +1,19 @@
 /*
     process.env.PORT -> es para que detecte el puerto del servidor.
+    token -> "secret"
+    frontend_url -> "http://localhost:5173"
 */
 
-export const PORT = process.env.PORT || 4000;
-export const MONGODB_URI =
-    process.env.MONGODB_URI ||
-    "mongodb+srv://sinfronteras:3FlkqeWld1irBtC7@sinfronteras.5lqm1.mongodb.net/sinfronteras?retryWrites=true&w=majority&appName=sinfronteras";
-export const TOKEN_SECRET = process.env.TOKEN_SECRET || "secret";
+//APP
+export const PORT = process.env.PORT;
 
-export const FRONTEND_URL = process.env.FRONTEND_URL || "http://localhost:5173";
+//MONGODB
+export const DB_HOST = process.env.DB_HOST;
+export const DB_DATABASE = process.env.DB_DATABASE;
+export const DB_PORT = process.env.DB_PORT;
+export const DB_URL = process.env.DB_URL;
 
-//export const TOKEN_SECRET = "some secret key";
+export const FRONTEND_URL = process.env.FRONTEND_URL;
+
+//JWT
+export const TOKEN_SECRET = process.env.TOKEN_SECRET;
