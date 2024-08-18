@@ -17,15 +17,21 @@ const app = express();
 //        credentials: true,
 //    })
 //);
-app.use(
-    cors({
-        credentials: true,
-        origin: FRONTEND_URL,
-    })
-);
+//app.use(
+//    cors({
+//        credentials: true,
+//        origin: FRONTEND_URL,
+//    })
+//);
+app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
+
+// TESTING
+app.get("/test", (req, res) => {
+    res.json({ mensaje: "hola" });
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api", alumnosRoutes);
