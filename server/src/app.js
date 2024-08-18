@@ -17,13 +17,13 @@ const app = express();
 //        credentials: true,
 //    })
 //);
-//app.use(
-//    cors({
-//        credentials: true,
-//        origin: FRONTEND_URL,
-//    })
-//);
-app.use(cors());
+app.use(
+    cors({
+        origin: FRONTEND_URL,
+        credentials: true,
+    })
+);
+//app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cookieParser());
