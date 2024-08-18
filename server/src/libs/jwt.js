@@ -1,4 +1,4 @@
-import { TOKEN_SECRET } from "../config.js";
+import { JWT_SECRET } from "../config.js";
 import jwt from "jsonwebtoken";
 
 //token
@@ -6,7 +6,7 @@ export function createAccessToken(payload) {
     return new Promise((resolve, reject) => {
         jwt.sign(
             payload,
-            TOKEN_SECRET,
+            JWT_SECRET,
             {
                 expiresIn: "1d",
             },
