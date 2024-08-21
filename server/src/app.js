@@ -37,8 +37,14 @@ const pool = new pg.Pool({
 app.use(
     cors({
         origin: FRONTEND_URL,
+        credentials: true, // si necesitas que las cookies sean enviadas entre el frontend y backend
     })
 );
+// Catch-all para rutas no manejadas, devuelve el index.html
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 //app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
