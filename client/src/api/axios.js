@@ -3,7 +3,7 @@ import { VITE_BACKEND_URL } from "../config";
 
 const instance = axios.create({
     baseURL: VITE_BACKEND_URL,
-    withCredentials: true,
+    //withCredentials: true,
 });
 
 export default instance;
