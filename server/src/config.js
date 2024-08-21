@@ -28,4 +28,4 @@ export const DB_DATABASE = process.env.DB_DATABASE || "postgres";
 export const DB_USER = process.env.DB_USER || "postgres";
 export const DB_PASSWORD = process.env.DB_PASSWORD || "mysecretpassword";
 
-export const PORT = process.env.PORT || 3000;
+export const PORT = process.env.PORT || 4000;

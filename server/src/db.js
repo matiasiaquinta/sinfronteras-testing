@@ -1,4 +1,4 @@
-/* import mongoose from "mongoose";
+import mongoose from "mongoose";
 import { DB_PORT, DB_URL } from "./config.js";
 //import Alumno from "./models/alumno.model.js";
 
@@ -11,4 +11,3 @@ export const connectDB = async () => {
         console.error(error);
     }
 };
- */

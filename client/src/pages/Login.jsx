@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import sfLogo from "../assets/sfLogo.png";
 
-const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
+const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
 
 export function Login() {
     const {
@@ -49,7 +49,7 @@ export function Login() {
                     <button
                         onClick={async () => {
                             const res = await fetch(
-                                "http://localhost:3000/users"
+                                "http://localhost:4000/users"
                             );
                             const data = await res.json();
                             console.log(data);
