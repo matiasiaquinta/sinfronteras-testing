@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [react()],
     build: {
         rollupOptions: {
-            external: ["zod"],
+            external: (id) => id.startsWith("zod"), // Excluye 'zod' solo si no es necesario en el frontend
         },
     },
 });
