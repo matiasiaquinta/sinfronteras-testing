@@ -1,4 +1,4 @@
-import app from "./app.js";
+/* import app from "./app.js";
 import { PORT } from "./config.js";
 import { connectDB } from "./db.js";
 
@@ -13,7 +13,7 @@ async function main() {
     }
 }
 
-main();
+main(); */
 
 //import app from "./app.js";
 //import { connectDB } from "./db.js";

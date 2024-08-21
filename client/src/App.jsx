@@ -23,7 +23,10 @@ function App() {
                         <main className="container md:mx-auto md:px-10">
                             {/* navbar */}
                             <Routes>
-                                <Route path="/login" element={<Login />} />
+                                <Route
+                                    path="/login"
+                                    element={<Login />}
+                                ></Route>
                                 <Route
                                     path="/register"
                                     element={<Register />}

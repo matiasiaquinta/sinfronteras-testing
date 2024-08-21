@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { useAuth } from "../context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import sfLogo from "../assets/sfLogo.png";
+
+const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3000";
 
 export function Login() {
     const {
@@ -24,6 +26,9 @@ export function Login() {
         }
     }, [isAuthenticated]);
 
+    //deploy
+    const [result, setResult] = useState("");
+
     return (
         <div className="flex h-screen items-center justify-center text-black">
             <div className="bg-cyan-500 w-4/5 m-auto p-10 rounded-md">
@@ -38,6 +43,33 @@ export function Login() {
                 <div className="text-2xl text-center mb-6">
                     <span>Bienvenido a </span>
                     <span className="block font-bold">Sin Fronteras Club</span>
+                </div>
+
+                <div>
+                    <button
+                        onClick={async () => {
+                            const res = await fetch(
+                                "http://localhost:3000/users"
+                            );
+                            const data = await res.json();
+                            console.log(data);
+                        }}
+                    >
+                        Users
+                    </button>
+                    <br />
+                    <button
+                        onClick={async () => {
+                            const res = await fetch(`${URL}/ping`);
+                            const data = await res.json();
+                            console.log(data);
+                            setResult(data);
+                        }}
+                    >
+                        Ping
+                    </button>
+
+                    <pre>{JSON.stringify(result, null, 2)}</pre>
                 </div>
 
                 {signinErrors.map((error, i) => (

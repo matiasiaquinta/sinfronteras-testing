@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { JWT_SECRET } from "../config.js";
+/* import { JWT_SECRET } from "../config.js"; */
 import { createAccessToken } from "../libs/jwt.js";
 import User from "../models/user.model.js";
 
