@@ -1,8 +1,8 @@
 import axios from "axios";
-import { API_URL } from "../config";
+import { VITE_BACKEND_URL } from "../config";
 
 const instance = axios.create({
-    baseURL: API_URL,
+    baseURL: VITE_BACKEND_URL,
     withCredentials: true,
 });
 
